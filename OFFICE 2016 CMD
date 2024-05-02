@@ -1,0 +1,21 @@
+//ACTIVAR OFFICE 2016 //
+
+cd /d %ProgramFiles%\Microsoft Office\Office16
+
+for /f %x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+
+cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+cscript ospp.vbs /unpkey:BTDRB >nul
+cscript ospp.vbs /unpkey:KHGM9 >nul
+cscript ospp.vbs /unpkey:CPQVG >nul
+cscript ospp.vbs /sethst:e8.us.to
+cscript ospp.vbs /setprt:1688
+cscript ospp.vbs /act
+
+cd /d "%ProgramFiles%\Microsoft Office\Office16"
+
+// ELIMINAR CARTEL //
+
+cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /sethst:e8.us.to >nul&cscript //nologo ospp.vbs /act
+
+exit
