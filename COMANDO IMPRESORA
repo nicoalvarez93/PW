@@ -3,3 +3,6 @@ net stop spooler
 del C:\Windows\System32\spool\PRINTERS
 
 net start spooler
+
+
+RpcAuthnLevelPrivacyEnabled
